@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / Tools
+.idea/
+.vscode/
+*.swp
+*~
+
+# Source / Working files (keep out of repo)
+*.psd
+*.xcf
+*.kra
+*.procreate
+scans-raw/
+drafts/
+
+# Auto-generated
+*.tmp
+*.bak
