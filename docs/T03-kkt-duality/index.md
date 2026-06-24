@@ -384,7 +384,7 @@ $$
 $$
 \boxed{
 \begin{aligned}
-\max_\alpha\quad & \sum_{i=1}^n\alpha_i-rac{1}{2}\sum_{i,j}\alpha_i\alpha_j y_i y_j x_i^\top x_j \\
+\max_\alpha\quad & \sum_{i=1}^n\alpha_i-\frac{1}{2}\sum_{i,j}\alpha_i\alpha_j y_i y_j x_i^\top x_j \\
 \text{s.t.}\quad & \alpha_i\ge 0, \\
 & \sum_i \alpha_i y_i=0.
 \end{aligned}}
