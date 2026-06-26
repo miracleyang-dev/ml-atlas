@@ -63,6 +63,14 @@ extra_javascript:
 extra:
   generator: false
 
+# Exclude build-time fetched assets and the fetch script from mkdocs page
+# scanning. Without this, mkdocs --strict aborts on KaTeX's bundled README.md
+# ("page exists in docs/ but not in nav"). Files are still copied to the
+# built site as static resources.
+exclude_docs: |
+  assets/
+  scripts/
+
 nav:
   - 首页: index.md
   - T01 · SVD / PCA / LDA: T01-svd-pca-lda/index.md

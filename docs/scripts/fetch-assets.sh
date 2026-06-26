@@ -49,6 +49,12 @@ fetch_npm "katex" "$KATEX_VER" "katex"
 rm -rf "$ASSETS_DIR/katex"
 mkdir -p "$ASSETS_DIR/katex"
 cp -R "$TMP/katex/package/dist/." "$ASSETS_DIR/katex/"
+# Strip non-runtime files the npm tarball ships in dist/ (README.md, etc.).
+# Without this, mkdocs --strict aborts because the markdown isn't in nav.
+find "$ASSETS_DIR/katex" -type f \
+  \( -iname "*.md" -o -iname "*.txt" -o -iname "LICENSE*" \
+     -o -iname "CHANGELOG*" -o -iname "CONTRIBUTING*" \) \
+  -delete
 
 # --- Inter (latin subset, weights 400/500/600/700) ---------------------------
 echo "[fetch-assets] @fontsource/inter $INTER_VER"
